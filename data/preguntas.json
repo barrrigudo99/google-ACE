@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "titulo": "Banco de Preguntas - Google Associate Cloud Engineer (ACE)",
+    "version": "1.0",
+    "total_preguntas": 4,
+    "idioma": "es"
+  },
+  "preguntas": [
+    {
+      "numero": 1,
+      "id": "D1-001",
+      "dominio": "Configuración del entorno cloud",
+      "tema": "Jerarquía de recursos",
+      "enunciado": "Tu empresa tiene una organización en Google Cloud con tres departamentos: Ventas, Ingeniería y Finanzas. Cada departamento gestiona varios proyectos y necesita políticas de seguridad distintas entre sí, pero todos deben heredar un conjunto de restricciones comunes definidas por el equipo central de seguridad.",
+      "pregunta": "¿Cuál es la mejor forma de estructurar la jerarquía de recursos?",
+      "opciones": {
+        "A": "Crear un proyecto por departamento y aplicar las políticas comunes manualmente en cada uno",
+        "B": "Crear una carpeta por departamento bajo el nodo de organización, aplicar las políticas comunes a nivel de organización y las específicas a nivel de carpeta",
+        "C": "Crear una organización separada por departamento",
+        "D": "Crear todos los proyectos directamente bajo la organización sin usar carpetas"
+      },
+      "respuesta_correcta": "B",
+      "explicacion": "Las carpetas permiten agrupar proyectos por equipo o departamento y aplicar herencia de políticas. Las políticas a nivel de organización se heredan por carpetas y proyectos, mientras que cada carpeta puede tener políticas adicionales específicas."
+    },
+    {
+      "numero": 2,
+      "id": "D1-002",
+      "dominio": "Configuración del entorno cloud",
+      "tema": "Jerarquía de recursos",
+      "enunciado": "",
+      "pregunta": "¿Cuál es el orden correcto de la jerarquía de recursos en Google Cloud, de mayor a menor nivel?",
+      "opciones": {
+        "A": "Proyecto > Organización > Carpeta > Recurso",
+        "B": "Organización > Proyecto > Carpeta > Recurso",
+        "C": "Organización > Carpeta > Proyecto > Recurso",
+        "D": "Carpeta > Organización > Proyecto > Recurso"
+      },
+      "respuesta_correcta": "C",
+      "explicacion": "La jerarquía es: Organización > Carpetas > Proyectos > Recursos individuales. Las políticas se heredan de arriba hacia abajo por defecto."
+    },
+    {
+      "numero": 3,
+      "id": "D1-003",
+      "dominio": "Configuración del entorno cloud",
+      "tema": "Organization Policy",
+      "enunciado": "Tu empresa exige que ningún recurso de Compute Engine se cree fuera de las regiones europeas, por motivos de cumplimiento normativo.",
+      "pregunta": "¿Qué deberías implementar?",
+      "opciones": {
+        "A": "Una alerta de Cloud Monitoring que notifique cuando se cree un recurso fuera de Europa",
+        "B": "Una Organization Policy con la restricción gcp.resourceLocations aplicada a nivel de organización",
+        "C": "Instrucciones documentadas en el manual de onboarding de desarrolladores",
+        "D": "Una revisión manual periódica de los recursos desplegados"
+      },
+      "respuesta_correcta": "B",
+      "explicacion": "Las Organization Policies son el mecanismo de Google Cloud para imponer restricciones preventivas que se heredan automáticamente por todos los proyectos actuales y futuros."
+    },
+    {
+      "numero": 4,
+      "id": "D1-004",
+      "dominio": "Configuración del acceso y la seguridad",
+      "tema": "IAM - roles",
+      "enunciado": "",
+      "pregunta": "¿Cuál de los siguientes es un rol básico de IAM en Google Cloud?",
+      "opciones": {
+        "A": "roles/storage.objectViewer",
+        "B": "roles/editor",
+        "C": "roles/compute.instanceAdmin",
+        "D": "roles/bigquery.dataViewer"
+      },
+      "respuesta_correcta": "B",
+      "explicacion": "Los roles básicos son Viewer, Editor y Owner. El resto son roles predefinidos más granulares y específicos de un servicio."
+    }
+  ]
+}
