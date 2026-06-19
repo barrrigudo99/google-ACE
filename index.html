@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google ACE Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Google Cloud</p>
+        <h1 id="quiz-title">Associate Cloud Engineer Quiz</h1>
+        <p id="quiz-subtitle">Modo práctica con preguntas tipo test</p>
+      </div>
+      <section class="score-card" aria-label="Puntuación">
+        <span id="score">0 / 0</span>
+        <small>aciertos</small>
+      </section>
+    </header>
+
+    <section class="panel controls">
+      <label class="control">
+        <span>Dominio</span>
+        <select id="domain-filter"><option value="all">Todos</option></select>
+      </label>
+      <label class="control">
+        <span>Tema</span>
+        <select id="topic-filter"><option value="all">Todos</option></select>
+      </label>
+      <div class="control-buttons">
+        <button id="shuffle-btn" class="secondary-btn" type="button">Aleatorio</button>
+        <button id="reset-btn" class="secondary-btn" type="button">Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="progress-section" aria-label="Progreso">
+      <div class="progress-info">
+        <span id="question-counter">Pregunta 0 de 0</span>
+        <span id="question-id"></span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </section>
+
+    <section class="question-card">
+      <div class="badges">
+        <span id="domain-badge" class="badge"></span>
+        <span id="topic-badge" class="badge muted"></span>
+      </div>
+      <p id="statement" class="statement"></p>
+      <h2 id="question-text"></h2>
+      <form id="options-container" class="options"></form>
+      <div id="feedback" class="feedback hidden"></div>
+      <div class="actions">
+        <button id="prev-btn" class="secondary-btn" type="button">Anterior</button>
+        <button id="check-btn" class="primary-btn" type="button">Comprobar</button>
+        <button id="next-btn" class="primary-btn" type="button">Siguiente</button>
+      </div>
+    </section>
+
+    <section class="panel summary">
+      <h3>Resumen</h3>
+      <div class="summary-grid">
+        <div><strong id="total-answered">0</strong><span>respondidas</span></div>
+        <div><strong id="total-correct">0</strong><span>correctas</span></div>
+        <div><strong id="total-wrong">0</strong><span>incorrectas</span></div>
+        <div><strong id="accuracy">0%</strong><span>precisión</span></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
